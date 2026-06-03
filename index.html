@@ -32,6 +32,9 @@ section{padding:5rem 3rem;}
 
 /* Hero */
 #hero{padding:7rem 3rem 5rem;border-bottom:1px solid var(--border);}
+.hero-inner{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;}
+.hero-photo{width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid var(--blue-light);flex-shrink:0;}
+@media(max-width:640px){.hero-inner{grid-template-columns:1fr;}.hero-photo{width:120px;height:120px;}}
 .hero-tag{display:inline-block;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);background:var(--blue-light);padding:0.3rem 0.8rem;border-radius:999px;margin-bottom:1.5rem;font-weight:500;}
 .hero-name{font-family:'Lora',serif;font-size:clamp(2.4rem,5vw,3.5rem);font-weight:400;line-height:1.15;margin-bottom:1rem;letter-spacing:-0.01em;}
 .hero-name span{color:var(--blue);}
@@ -150,12 +153,17 @@ footer p{font-size:0.8rem;color:var(--muted);}
 
 <section id="hero">
   <div class="container">
-    <div class="hero-tag">Open to Opportunities</div>
-    <h1 class="hero-name">Nawfal Lihawa<br><span>AI Consultant</span></h1>
-    <p class="hero-sub">Helping organizations understand, adopt, and build with AI, from strategy to implementation.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Get in touch</a>
-      <a href="#projects" class="btn-ghost">See my work</a>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">Open to Opportunities</div>
+        <h1 class="hero-name">Nawfal Lihawa<br><span>AI Consultant</span></h1>
+        <p class="hero-sub">Helping organizations understand, adopt, and build with AI, from strategy to implementation.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Get in touch</a>
+          <a href="#projects" class="btn-ghost">See my work</a>
+        </div>
+      </div>
+      <img class="hero-photo" src="profilephoto.png" alt="Nawfal Lihawa"/>
     </div>
   </div>
 </section>
